@@ -22,6 +22,10 @@ main {
     padding: 1rem;
 }
 
+.container__titulo h1 {
+    border-bottom: 5px solid #b38900;
+}
+
 .container__img {
     display: flex;
     align-items: center;
@@ -41,7 +45,7 @@ main {
 }
 
 .img-responsive:hover {
-    transform: scaleX(-1)
+    transform: scaleX(-1) repeat;
 }
 
 .container__conteudo {
@@ -52,7 +56,12 @@ main {
 .container__conteudo h2 {
     text-transform: uppercase;
     font-weight: 700;
-    padding: .5rem
+    padding: .5rem;
+    border-bottom: 5px solid #b38900;
+}
+
+.container__conteudo p {
+    padding-top: .5rem;
 }
 
 .container_article {
@@ -67,8 +76,8 @@ iframe {
     max-height: 200px;
     margin: 1rem;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-
     border-radius: 15%;
 }
 
@@ -107,4 +116,90 @@ footer a {
 
 footer i {
     padding-right: 10px;
+}
+
+
+
+
+@media (min-width: 760px) {
+
+    .container__img img {
+        max-width: 450px;
+        max-height: 550px;
+    }
+
+    iframe {
+        max-width: 350px;
+        max-height: 250px;
+    }
+
+    .container__iframe {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .container__conteudo p {
+        font-size: 18px;
+    }
+
+    .container__titulo {
+        font-size: 26px;
+    }
+
+    .container__article article {
+        background-color: #EDDFB3;
+        border-radius: 15px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    footer a {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container__titulo {
+        font-size: 70px;
+        text-align: center;
+        line-height: 60px;
+        -webkit-box-reflect: below 0 linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+    }
+
+    .container__img {
+        padding-top: 5rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    iframe {
+        max-width: 500px;
+        max-height: 400px;
+    }
+
+    .container__iframe {
+        flex-direction: column;
+    }
+
+    footer {
+
+        height: 4rem;
+
+    }
+
+    footer p {
+        font-size: 16px;
+    }
+
+    footer a {
+        font-size: 16px;
+    }
+
+
+
 }
